@@ -6,6 +6,7 @@ public class Main {
             Game game = new Game();
             Board board = game.getBoard();
             System.out.println(board.toString());
+            board.updateSquare(2);
 
     }
 }

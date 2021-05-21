@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -7,22 +8,27 @@ public class Field {
     private int y;
     private List<Integer> poss;
     private int value;
+    private int square;
 
-
-    public Field(int x, int y) {
+    public Field(int x, int y, int square) {
         this.x = x;
         this.y = y;
+        this.square = square;
     }
 
-    public Field(int x, int y, int value) {
-        this.x = x;
-        this.y = y;
-        List<Integer> Poss = Arrays.asList(1,2,3,4,5,6,7,8,9);
 
+    public int getY() {
+        return y;
     }
 
-    public int[] getCoords() {
-        return new int[] {x, y};
+    public int getX() {
+        return x;
+    }
+
+    public void setSquare(int square) { this.square = square; }
+
+    public int getSquare() {
+        return square;
     }
 
     public void setValue(int value){
